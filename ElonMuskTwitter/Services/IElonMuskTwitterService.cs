@@ -1,11 +1,13 @@
-﻿using System.Threading.Tasks;
+﻿using ElonMuskTwitter.Models;
 
 namespace ElonMuskTwitter.Services
 {
     public interface IElonMuskTwitterService
     {
-        public Task<string> GetLatestTweet();
+        public TweetSetModel GetLatestElonTweets();
 
-        public Task<string> GetTweetsByKeyword(string keyword);
+        public TweetSetModel GetTweetsByKeyword(string keyword);
+
+        public ElonInfoModel GetElonInfo();
     }
 }
